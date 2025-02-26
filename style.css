@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: poppins, sans-serif;
+  background-color: #efedec;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  background-color: #fff;
+  width: 50%;
+  padding: 24px 24px;
+  height: 400px;
+  box-shadow: 0 0 15px 4px #c5c3c1;
+  border-radius: 10px;
+}
+h1 {
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+  color: #ff7200;
+}
+.to-do {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 30px;
+  background-color: #edeef0;
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+button {
+  border: none;
+  outline: none;
+  font-size: 18px;
+  background-color: #ff7200;
+  border-radius: 50px;
+  padding: 10px 20px;
+  color: #fff;
+  cursor: pointer;
+}
+.to-do input {
+  border: none;
+  outline: none;
+  padding: 10px;
+  flex: 1;
+  /* border-radius: ;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px; */
+  background-color: #edeef0;
+  font-size: 16px;
+}
+.list {
+  margin-top: 10px;
+}
+.list li {
+  list-style: none;
+  padding-left: 32px;
+  line-height: 25px;
+  position: relative;
+  font-size: 18px;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+.list li.unchecked::before {
+  background: url(Imgs/dry-clean.png);
+  background-position: center;
+  background-size: cover;
+  content: "";
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  transform: translateY(-50%);
+  border: 1px solid #edeef0;
+}
+.list li.checked {
+  text-decoration: line-through;
+  color: #333;
+}
+.list li.checked::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  transform: translateY(-50%);
+  background: url(Imgs/check.png);
+  background-position: center;
+  background-size: cover;
+  height: 20px;
+  width: 20px;
+}
+li span {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #555;
+  border-radius: 50%;
+  height: 22px;
+  width: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+li span:hover {
+  background-color: #edeef0;
+}
